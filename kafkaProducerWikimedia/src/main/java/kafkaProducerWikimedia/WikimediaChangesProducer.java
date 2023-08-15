@@ -14,4 +14,10 @@ public class WikimediaChangesProducer {
 	public WikimediaChangesProducer(KafkaTemplate<String, String> kafkaTemplate) {
 		this.kafkaTemplate = kafkaTemplate;
 	}
+	
+	public void sendMessage() {
+		String topic = "wikimedia-recent-change";
+		
+		// To read realtime stream data from wikimedia, we use event source.
+	}
 }
