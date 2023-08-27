@@ -34,7 +34,7 @@ public class WikimediaChangesHandler implements EventHandler {
 	@Override
 	public void onMessage(String event, MessageEvent messageEvent) throws Exception {
 		// TODO Auto-generated method stub
-		LOGGER.info(String.format("event data: {}", messageEvent.getData()));
+		LOGGER.info(String.format("event data: " + messageEvent.getData()));
 		
 		kafkaTemplate.send(topic, messageEvent.getData());
 	}
